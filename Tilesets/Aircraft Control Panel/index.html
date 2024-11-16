@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5x3 Tile Grid</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #0F0F0F;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #grid-container {
+            display: grid;
+            gap: 2px;
+            grid-template-columns: repeat(5, 160px); /* 5 columns */
+            grid-template-rows: repeat(3, 160px);    /* 3 rows */
+        }
+        .tile {
+            width: 160px;
+            height: 160px;
+            cursor: pointer;
+            background-size: cover;
+            background-position: center;
+        }
+        .empty {
+            background: transparent; /* Empty tile */
+        }
+    </style>
+</head>
+<body>
+    <div id="grid-container"></div>
+
+    <script>
+        // Configuration
+        const maxImages = 13; // Number of images in the assets folder
+        const rows = 3;
+        const columns = 5;
+
+        const gridContainer = document.getElementById('grid-container');
+
+        // Function to get a random image path
+        function getRandomImage() {
+            const randomIndex = Math.floor(Math.random() * maxImages) + 1;
+            return `assets/${randomIndex}.jpg`;
+        }
+
+        // Function to create a tile
+        function createTile() {
+            const tile = document.createElement('div');
+            tile.className = 'tile';
+            tile.style.backgroundImage = `url('${getRandomImage()}')`;
+
+            // Update image on click or hover
+            tile.addEventListener('click', () => {
+                tile.style.backgroundImage = `url('${getRandomImage()}')`;
+            });
+            tile.addEventListener('mouseover', () => {
+                tile.style.backgroundImage = `url('${getRandomImage()}')`;
+            });
+
+            return tile;
+        }
+
+        // Create the grid of tiles with the specified condition
+        for (let row = 0; row < rows; row++) {
+            for (let col = 0; col < columns; col++) {
+                const isBottomRow = row === rows - 1;
+                const isLeftMostTile = col === 0;
+                const isRightMostTile = col === columns - 1;
+
+                // Leave bottom left and bottom right tiles empty
+                if (isBottomRow && (isLeftMostTile || isRightMostTile)) {
+                    const emptyTile = document.createElement('div');
+                    emptyTile.className = 'tile empty';
+                    gridContainer.appendChild(emptyTile);
+                } else {
+                    const tile = createTile();
+                    gridContainer.appendChild(tile);
+                }
+            }
+        }
+    </script>
+</body>
+</html>
