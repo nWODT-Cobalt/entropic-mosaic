@@ -2,74 +2,94 @@
 
 ## Tileset Ideas
 
-**Montre : en rond, avec rubis et sculpture, et 4 complications par tuile, sur un bg de pont usiné**t
+**Mouvement de montre**
 
-multi-scale
+Engrenages, barillets, complications (eg phases de la lune), rotors, rubis etc.  Avec un pont usiné en arrière-plan.
 
-rond
+Approximer une forme ronde avec la grille.
 
-AI
+Style "classique" ou œuvre d'art (presque un sceau abstrait alors).
 
-**tableau de bord**
+![ First Look The Speake Marin Ripples Skeleton, with new High-Frequency Movement ](https://monochrome-watches.com/wp-content/uploads/2024/08/Speake-Marin-Ripples-Skeleton-review-ulra-thin-high-frequency-luxury-sports-watch-integrated-bracelet-7.jpg)
 
-**pastel genre tom c**
+![Andreas Strehler Debuts Hand Engraved Faune et Flore](https://watchesbysjx.com/wp-content/uploads/2024/10/Andreas-Strehler-flore-faune-front-2.jpg)
 
-baseline code
+#multi-scale
 
-**chateau / ile generative**
+**Moderniste**
 
-Conditionel, eg conditions limites pour blocs toits ou arbres
+Couleurs pastels pour adoucir, ou complètement modernistes pour impacter.
 
-**MTL en symboles / heraldique**
+**Château**
 
-**MTL buildings**
+Avec conditions limites pour blocs toits (plus de tuiles au-dessus) ou arbres (plus de tuiles à côté.)
 
-**tea laves**
+Idem pour île avec phare.
 
-**UXA abstract**
+#conditional
 
-**mains ou fléches**
+**MTL**
 
-**phylloytaxie**
+En symboles, pas en bâtiments. Eg le logo de la ville.
 
-multi-scale
+**Tea Leaves**
 
-conditionel pour bourgeon ou fleur
+**UXA Abstractions**
 
-**geometrie sacree**
+Eg resonators, entities sarcophagus etc.
 
-itou mais N&B par défaut, couleur en hover
+**Mains ou fléches**
 
-**heraldique ?**
+Ou yeux etc. Pop art.
 
-**Omg tapis route**
+**Phylloytaxie**
+
+Avec conditions pour bourgeon ou fleur.
+
+#multi-scale #conditional
+
+**Sigil**
+
+Pk pas N&B par défaut, couleur en hover.
+
+**Tapis route**
+
+Pour valeur décorative uniquement. Sinon on sort d'une mosaïque, et on commence un générateur procédural de donjon.
+
+Blockitecture ? Isométrique ?
+
+**Façade de bâtisse**
+
+**Truchet**
 
 ## Parameterization
 
 Parameters
 
-ideally:
+Shape:
 
-- \# rows
-- \# columns
+- \# of rows
+- \# of columns
 - width
 - height
-- interaction (none, click, hover)
+- aspect ratio (horizontal, vertical, square, round)
 
-- ponderation (que certaines tuiles apparaissent moins)
-- multiscale truchet
-- colspan ou rowspan
-- conditions limites (some blocks are pondered towards centers or edges; some top or side blocks "end" the line)
+Interactivity:
 
-in UI:
-
+- Refresh (none, click, hover)
 - reset all
 - randomize all
 - select tile set
 - select color scheme
 - download
-- aspect ratio (horizontal, vertical, square, round) -->
+
+Logic:
+
+- weighting (so that some tiles are more/less frequent than others)
+- multiscale truchet
+- colspan ou rowspan
+- conditions limites (some blocks are pondered towards centers or edges; some top or side blocks "end" the line)
 
 ## Misc
 
-glamour mockup of the above
+- Faire un UI glamour du précédent
