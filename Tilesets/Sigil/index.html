@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic SVG Grid</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .grid-container {
+            width: 400px; /* Adjustable width */
+            height: 400px; /* Adjustable height */
+            border-radius: 8px;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+        }
+        .tile {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .tile img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container" id="grid"></div>
+
+    <script>
+        const escutcheonFolder = 'escutcheon/';
+        const tinctureFolder = 'tincture/';
+        const tileSize = 80;
+        const gridSize = 5;
+
+        // Helper to get a random image from a folder
+        const getRandomImage = (folder) => {
+            const totalImages = 10; // Adjust this to the number of images in the folder
+            const randomIndex = Math.floor(Math.random() * totalImages) + 1;
+            return `${folder}${randomIndex}.svg`; // Assuming files are named image1.svg, image2.svg, etc.
+        };
+
+        const createGrid = () => {
+            const grid = document.getElementById('grid');
+            for (let i = 0; i < gridSize * gridSize; i++) {
+                const tile = document.createElement('div');
+                tile.className = 'tile';
+                const img = document.createElement('img');
+                img.src = getRandomImage(escutcheonFolder);
+
+                tile.appendChild(img);
+                grid.appendChild(tile);
+
+                // Event listeners for hover and click
+                tile.addEventListener('mouseenter', () => {
+                    img.src = getRandomImage(tinctureFolder);
+                });
+
+                tile.addEventListener('click', () => {
+                    img.src = getRandomImage(tinctureFolder);
+                });
+            }
+        };
+
+        // Initialize the grid
+        createGrid();
+    </script>
+</body>
+</html>
