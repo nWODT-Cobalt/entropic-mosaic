@@ -48,10 +48,6 @@ Avec conditions pour bourgeon ou fleur.
 
 #multi-scale #conditional
 
-**Sigil**
-
-Pk pas N&B par défaut, couleur en hover.
-
 **Tapis route**
 
 Pour valeur décorative uniquement. Sinon on sort d'une mosaïque, et on commence un générateur procédural de donjon.
@@ -61,6 +57,16 @@ Blockitecture ? Isométrique ?
 **Façade de bâtisse**
 
 **Truchet**
+
+<https://ca.pinterest.com/nwodtcobalt/truchet/>
+
+<https://dmackinnon1.github.io/truchet/>
+
+<https://truchetpatterns.netlify.app/>
+
+<https://www.deconbatch.com/2022/03/truchet-tiling.html>
+
+<https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://archive.bridgesmathart.org/2018/bridges2018-39.pdf&ved=2ahUKEwiF4K3J1O6JAxVAMlkFHcYSIR8QFnoECBoQAQ&usg=AOvVaw0wuIlaeoMDeGrtdWjE7171> (PDF, multi-scale)
 
 ## Parameterization
 
