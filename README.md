@@ -1,7 +1,5 @@
 # Entropic Mosaic
 
-<!-- Meilleur nom. Entropic Tiles? mosaique tesselle entropics isentropic entro-pic-->
-
 Experimenting with AI to create mosaics.
 
 <!-- optionally-parameterized, random, interactive -->
@@ -10,7 +8,7 @@ Experimenting with AI to create mosaics.
 
 ## Usage
 
-Open any `index.html` in the `Tilesets` folder to load a mosaic.
+Open any `index.html` from the `Tilesets` folder to load a mosaic.
 Refresh the page, hover an individual tile or click it to update the mosaic.
 
 <!-- ## Available Tilesets

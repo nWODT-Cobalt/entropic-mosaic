@@ -68,6 +68,34 @@ Blockitecture ? Isométrique ?
 
 <https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://archive.bridgesmathart.org/2018/bridges2018-39.pdf&ved=2ahUKEwiF4K3J1O6JAxVAMlkFHcYSIR8QFnoECBoQAQ&usg=AOvVaw0wuIlaeoMDeGrtdWjE7171> (PDF, multi-scale)
 
+**Illos abtraites pour placeholder de contenu**
+
+L'équivalent du Redacted font, en visuel. Formes Bauhaus ? Avec un bouton pour télécharger en SVG.
+
+**Grille de chiffres ou de lettres**
+
+**Purement ornemental**
+
+**Motifs Louis Vuitton**
+
+Sur page entière, avec un bouton de téléchargement.
+
+[](https://dribbble.com/shots/6337744-Ornament-Exploration-02)
+
+**Pale Heart Knight-Errant coat of arms**
+
+Avec une pioche différente pour chaque quart ou moitié.
+
+**Circuit imprimé**
+
+Avec une gross puce fixe au centre, de 4 ou neuf tuiles de surface.
+
+<!-- **Boîtes de conserves** -->
+
+**Feuilles et fleurs**
+
+Mais à plat, comme un champ de nénuphars.
+
 ## Parameterization
 
 Parameters
@@ -99,3 +127,5 @@ Logic:
 ## Misc
 
 - Faire un UI glamour du précédent
+- Spécifier directement les bons noms de class/id
+- plugin Figma
